@@ -1,0 +1,39 @@
+.decorNone(){
+	text-decoration: none;
+	color: white;
+}
+.list-reset(){
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.pseudo-elem(){
+	position: absolute;
+	display: inline-block;
+	content: "";
+}
+.zigzag-bottom(){
+	position: relative;
+	&:after {
+		.pseudo-elem();
+		height: 10px;
+		width: 200vw;
+		bottom: -3px;
+		transform: translateX(-50%);
+		background-image: url('../img/zigzag-line-desktop.svg');
+	background-repeat: repeat-x;
+	background-size: 328px;
+	background-position: center;
+		@media (min-width: @tablet-width) {
+			background-size: 778px;
+			height: 20px;
+		}
+		@media (min-width: @desktop-width){
+			width: 100%;
+			right: -50%;
+			height: 32px;
+			bottom: 0;
+			background-size: 1200px;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+.button {
+	cursor: pointer;
+	display: block;
+	text-transform: uppercase;
+	font-size: 17px;
+	line-height: 48px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	border: 2px solid #444444;
+	background-color: white;
+	@media (min-width: @tablet-width) {
+		width: 290px;
+	}
+	&--disabled {
+		opacity: 0.3 !important;
+	}
+	&:not(.button--arrow){
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+		&:active {
+			color: rgba(255,255,255,0.3);
+		}
+	}
+	
+	&--arrow-group {
+		display: flex;
+	}
+	&--arrow {
+		cursor: pointer;
+		height: 50px;
+		border: none;
+		box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+		width: 50%;
+		position: relative;
+		background: url('../img/icon-huge-arrow.svg') no-repeat center;
+		background-size: 40%;
+		&:last-child{
+			transform: rotate(180deg);
+		}
+		@media (min-width: @tablet-width) {
+			width: 50px;
+			background-size: 100%;
+			box-shadow: none;
+		}
+		&:hover {
+			opacity: 0.6;
+		}
+		&:active {
+			opacity: 0.3;
+		}
+	}
+}
