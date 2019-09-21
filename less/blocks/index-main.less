@@ -1,9 +1,24 @@
 .index-main__contaiter {
 	padding-top: 70px;
-	background-image: url('../img/background-mobile.jpg');
+	background-image: url('../img/background-mobile.webp');
+	background-size: 284px;
 	background-repeat: no-repeat;
 	background-position: center top 24px;
 	background-color: #f9f9f9;
+	@media (min-resolution: @retina-dpi),
+			(min-resolution: @retina-dppx) {
+				background-image: url('../img/background-mobile@2x.webp');
+			}
+}
+
+			
+.no-webp .index-main__contaiter{
+	background-image: url('../img/background-mobile.jpg');
+	@media (min-resolution: @retina-dpi),
+			(min-resolution: @retina-dppx) {
+				background-image: url('../img/background-mobile@2x.jpg');
+			}
+	
 }
 .index-main__title {
 	text-align: center;
@@ -95,9 +110,20 @@
 @media (min-width: @tablet-width) {
 	.index-main__contaiter {
 		padding-top: 93px;
-		background-image: url('../img/background-desktop.jpg');
+		background-image: url('../img/background-desktop.webp');
 		background-size: 546px;
 		background-position: center top 10px;
+		@media (min-resolution: @retina-dpi),
+			(min-resolution: @retina-dppx) {
+				background-image: url('../img/background-desktop@2x.webp');
+			}
+	}
+	.no-webp .index-main__contaiter {
+		background-image: url('../img/background-desktop.jpg');
+		@media (min-resolution: @retina-dpi),
+			(min-resolution: @retina-dppx) {
+				background-image: url('../img/background-desktop@2x.jpg');
+			}
 	}
 	.index-main__title {
 		margin-bottom: 373px;

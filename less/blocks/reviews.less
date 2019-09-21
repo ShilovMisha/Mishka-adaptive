@@ -54,7 +54,7 @@
 			.pseudo-elem();
 			height: 100%;
 			width: 68%;
-			background-image: url('../img/review.jpg');
+			background-image: url('../img/review.webp');
 			background-repeat: no-repeat;
 			background-size: 100%;
 			top: 0;
@@ -62,6 +62,9 @@
 			left: -23%;
 			z-index: -1;
 		}
+	}
+	.no-webp .reviews:before {
+		background-image: url('../img/review.jpg');
 	}
 	.reviews__item {
 		padding-bottom: 46px;
