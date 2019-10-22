@@ -1,3 +1,4 @@
+
 .index-main__contaiter {
 	padding-top: 70px;
 	background-image: url('../img/background-mobile.webp');
@@ -10,7 +11,6 @@
 				background-image: url('../img/background-mobile@2x.webp');
 			}
 }
-
 			
 .no-webp .index-main__contaiter{
 	background-image: url('../img/background-mobile.jpg');
@@ -18,7 +18,6 @@
 			(min-resolution: @retina-dppx) {
 				background-image: url('../img/background-mobile@2x.jpg');
 			}
-	
 }
 .index-main__title {
 	text-align: center;
@@ -33,20 +32,19 @@
 }
 .index-main__item{
 	a {
-		line-height: 24px;
-		letter-spacing: 0.09em;
-		z-index: 1;
+	line-height: 24px;
+	letter-spacing: 0.09em;
+	z-index: 1;
 	color: white;
 	font-weight: bold;
 	display: inline-flex;
 	align-items: center;
-	//for IE11
-	height: 102px;
-	///
-	min-height: 103px;
-	padding-right: 74%;
+	padding-top: 25px;
+    padding-bottom: 30px;
+	padding-right: 36%;
 	width: 100%;
 	position:  relative;
+	transition: transform 0.2s ease-in;
 			&:active {
 				&:after {
 					opacity: 0.1;
@@ -56,12 +54,9 @@
 			&:hover {
 				transform: scaleY(1.04) scaleX(1.004);
 				display: block;
-				padding-top: 27px;
 				&:after {
 						transform: translateY(-55%);
 				}
-
-				//height: 110px;
 			}
 			&:after {
 				.pseudo-elem();
@@ -85,8 +80,7 @@
 			}
 	}
 	&:first-child {
-		a {
-			
+		a {	
 			&:before {
 				background-color: #63d1bb;
 			}
@@ -109,7 +103,7 @@
 }
 @media (min-width: @tablet-width) {
 	.index-main__contaiter {
-		padding-top: 93px;
+		padding-top: 86px;
 		background-image: url('../img/background-desktop.webp');
 		background-size: 546px;
 		background-position: center top 10px;
@@ -142,7 +136,7 @@
 		&:after {
 			.pseudo-elem();
 			width: 200vw;
-			height: 22px;
+			height: 24px;
 			background-image: url('../img/zigzag-fill-desktop.svg');
 			background-repeat: repeat-x;
 			background-size: 768px;
@@ -156,18 +150,17 @@
 	.index-main__item {
 		flex-grow: 1;
 		min-width: 50%;
+		display: flex;
 		&:last-child a {
 			background-color: #56c3b2;
 		}
 		a  {
-			padding-right: 65%;
+			font-size: 21px;
+    		line-height: 29px;
+    		letter-spacing: -0.01em;
+    		padding-top: 29px;
 			padding-left: 35px;
-			height: 120px;
 			background-color: #63d1bb;
-			&:hover {
-				
-				
-			}
 			&:before {
 				display: none;
 			}
@@ -186,12 +179,15 @@
 	}
 	
 	.index-main__list:after {
-		height: 37px;
+		height: 42px;
 		bottom: -20px;
 		background-size: 1202px;
 	}
 	.index-main__item a {
 		font-size: 18px;
 		line-height: 31px;
+		letter-spacing: .09em;
+		padding-top: 26px;
+		padding-bottom: 32px;
 	}
 }

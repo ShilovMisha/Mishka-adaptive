@@ -7,6 +7,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var del = require("del");
 var rename = require("gulp-rename");
+var groupmq = require('gulp-group-css-media-queries');
 var csso = require("gulp-csso");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
@@ -25,7 +26,8 @@ gulp.task("serve", ["style"], function(){
 		notify: false,
 		open: true,
 		cors: true,
-		ui: false
+		ui: false,
+		online: true
 	});
 	gulp.watch("less/**/*.less", ["style"]);
 	gulp.watch("less/blocks/*.less", ["style"]);
@@ -63,7 +65,8 @@ gulp.task("style", function(){
 	return gulp.src("less/style.less")
 		.pipe(plumber())
 		.pipe(less())
-		.pipe(postcss([autoprefixer({ grid: 'autoplace' })]))
+		.pipe(postcss([autoprefixer()]))
+		.pipe(groupmq())
 		.pipe(csso())
 		.pipe(gulp.dest("css"))
 		.pipe(reload({stream: true}));

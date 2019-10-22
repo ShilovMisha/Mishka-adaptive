@@ -79,21 +79,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		//for IE11
-		height: 140px;
-		//
-		min-height: 141px;
+		flex-wrap: wrap;
+		padding-top: 33px;
+    	padding-bottom: 33px;
 	}
 	.main-footer__logo {
 		width: 27.24%;
 	}
-	.main-footer__copyright {
+	.main-footer__copyright, .main-footer__social-list {
 		width: 27.24%;
 	}
-}
-
-@media (min-width: @desktop-width) {
 	.main-footer__copyright {
-		padding-left: 98px;
+		justify-content: flex-end;
 	}
 }

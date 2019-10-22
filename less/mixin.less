@@ -37,3 +37,12 @@
 		}
 	}
 }
+//IE11 hack. Don't use "." in selector
+.ie11(@selector,@content){
+	_:-ms-fullscreen, :root {
+		.@{selector} { 
+				@content();
+		}
+	}
+	
+}

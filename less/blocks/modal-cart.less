@@ -28,11 +28,17 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
-	display: none;
+	visibility: hidden;
+	transform: translate(-50%, -50%) scale(0.01);
+	transition: transform 0.3s;
 }
-.js .modal-cart--show, .js .modal-cart--show + .modal-cart__mask{
+.js .modal-cart--show{
+	transform: translate(-50%, -50%);
+	visibility: visible;
+}
+.js .modal-cart--show + .modal-cart__mask {
 	display: block;
+	
 }
 .modal-cart__title {
 	font-size: 25px;
@@ -64,27 +70,8 @@
 		margin-right: 8px;
 	}
 }
-.modal-cart__input-size {
-	display: none;
-}
 .modal-cart__input-size:checked + .modal-cart__label-size{
 	border-color: #63d1bb;
-}
-.modal-cart__submit {
-	cursor: pointer;
-	width: 260px;
-	height: 52px;
-	border: none;
-	background-color: #63d1bb;
-	color: white;
-	text-transform: uppercase;
-	font-weight: bold;
-	&:hover {
-				transform: scaleY(1.04) translateY(-1px);
-			}
-	&:active {
-		color: rgba(255,255,255,0.3);
-	}
 }
 @media (min-width: @tablet-width) {
 	.modal-cart {

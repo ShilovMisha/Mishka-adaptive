@@ -21,7 +21,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
-	
 	font-size: 17px;
 	line-height: 30px;
 	box-sizing: inherit;
@@ -41,5 +40,23 @@ a {
 }
 *, *:before, *:after {
 	box-sizing: border-box;
+	word-break: break-word;
 }
 
+.js noscript {
+	display: none;
+}
+.no-js img:not([src]) {
+	display: none;
+}
+//for Safari and FF
+textarea,
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="button"],
+input[type="submit"]  {
+	-webkit-appearance: none;
+	border-radius: 0;
+	box-shadow: none;
+}

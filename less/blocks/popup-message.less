@@ -1,0 +1,29 @@
+.popup-message {
+	font-size: 12px;
+	line-height: 1.2em;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	z-index: 10;
+	padding: 15px;
+	padding-top: 10px;
+	border: 2px solid #63d1bb;
+	border-top-style: none;
+	border-radius: 0px 0px 5px 5px;
+	background-color: #f9f9f9;
+	transform: translate(-50%, -110%);
+	transition: transform 0.4s ease-out;
+}
+
+.popup-message--show {
+		transform: translate(-50%, 0px);
+	}
+.popup-message--error {
+	border-color: rgba(255,0,0,0.3);
+	color: red;
+}
+@media (min-width: @tablet-width) {
+	.popup-message {
+		font-size: 14px;
+	}
+}
